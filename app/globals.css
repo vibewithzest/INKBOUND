@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #F2F0E9;
+  /* Paper White */
+  --foreground: #1c1c1c;
+  /* Ink Black */
+
+  --primary: #DC143C;
+  /* Crimson */
+  --primary-foreground: #ffffff;
+
+  --muted: #E5E2D9;
+  --muted-foreground: #787570;
+
+  --card: #ffffff;
+  --card-foreground: #1c1c1c;
+
+  --border: #1c1c1c;
+}
+
+
+
+[data-theme='dark'] {
+  --background: #121212;
+  /* Dark Charcoal */
+  --foreground: #EDEDED;
+  /* Off White */
+
+  --primary: #FF2E4D;
+  /* Primary Red */
+  --primary-foreground: #ffffff;
+
+  --muted: #2A2A2A;
+  --muted-foreground: #A1A1AA;
+
+  --card: #1E1E1E;
+  --card-foreground: #EDEDED;
+
+  --border: #404040;
+  /* Softer border for dark mode */
+  --input: #2A2A2A;
+}
+
+@theme {
+  /* Register ALL colors for Tailwind v4 */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+
+  /* Legacy aliases */
+  --color-paper: var(--background);
+  --color-ink: var(--foreground);
+  --color-crimson: var(--primary);
+
+  --font-display: var(--font-bangers), cursive;
+  --font-body: var(--font-inter), sans-serif;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%231c1c1c' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Comic Border Utility */
+.ink-border {
+  border: 3px solid var(--border);
+  box-shadow: 4px 4px 0px 0px var(--border);
+  transition: all 0.2s ease;
+}
+
+.ink-border:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px var(--border);
+}
+
+.ink-card {
+  background: var(--card);
+  border: 3px solid var(--border);
+  border-radius: 0.5rem;
+}

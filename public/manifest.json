@@ -1,0 +1,41 @@
+{
+    "name": "Inkbound",
+    "short_name": "Inkbound",
+    "description": "Read manga, manhwa, and manhua with style",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#121212",
+    "theme_color": "#DC143C",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "entertainment",
+        "books"
+    ],
+    "screenshots": [],
+    "shortcuts": [
+        {
+            "name": "Browse Manga",
+            "url": "/browse",
+            "description": "Discover new manga"
+        },
+        {
+            "name": "My Library",
+            "url": "/library",
+            "description": "View your saved manga"
+        }
+    ]
+}
